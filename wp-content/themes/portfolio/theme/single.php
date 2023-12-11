@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package _tw
+ * @package cs_Starter
  */
 
 get_header();
@@ -23,11 +23,11 @@ get_header();
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', '_tw' ) . '</span> ' .
-								'<span class="sr-only">' . __( 'Next post:', '_tw' ) . '</span> <br/>' .
+							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', 'cs' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Next post:', 'cs' ) . '</span> <br/>' .
 								'<span>%title</span>',
-							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', '_tw' ) . '</span> ' .
-								'<span class="sr-only">' . __( 'Previous post:', '_tw' ) . '</span> <br/>' .
+							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', 'cs' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Previous post:', 'cs' ) . '</span> <br/>' .
 								'<span>%title</span>',
 						)
 					);

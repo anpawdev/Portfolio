@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _tw
+ * @package CS_Starter
  */
 
 ?>
@@ -16,20 +16,20 @@
 
 		<?php if ( ! is_page() ) : ?>
 			<div class="entry-meta">
-				<?php _tw_entry_meta(); ?>
+				<?php csentry_meta(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php _tw_post_thumbnail(); ?>
+	<?php cspost_thumbnail(); ?>
 
-	<div <?php _tw_content_class( 'entry-content' ); ?>>
+	<div <?php cscontent_class( 'entry-content' ); ?>>
 		<?php
 		the_content(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					__( 'Continue reading<span class="sr-only"> "%s"</span>', '_tw' ),
+					__( 'Continue reading<span class="sr-only"> "%s"</span>', 'cs' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -42,7 +42,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div>' . __( 'Pages:', '_tw' ),
+				'before' => '<div>' . __( 'Pages:', 'cs' ),
 				'after'  => '</div>',
 			)
 		);
@@ -50,7 +50,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php _tw_entry_footer(); ?>
+		<?php csentry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-${ID} -->
