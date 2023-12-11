@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package _tw
+ * @package CS_Starter
  */
 
 get_header();
@@ -15,11 +15,11 @@ get_header();
 
 			<div>
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Page Not Found', '_tw' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Page Not Found', 'cs' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div <?php _tw_content_class( 'page-content' ); ?>>
-					<p><?php esc_html_e( 'This page could not be found. It might have been removed or renamed, or it may never have existed.', '_tw' ); ?></p>
+				<div <?php content_class( 'page-content' ); ?>>
+					<p><?php esc_html_e( 'This page could not be found. It might have been removed or renamed, or it may never have existed.', 'cs' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</div>

@@ -9,25 +9,39 @@ module.exports = {
 	content: [
 		// Ensure changes to PHP files and `theme.json` trigger a rebuild.
 		'./theme/**/*.php',
+		'./theme/theme.json',
 	],
 	theme: {
 		// Extend the default Tailwind theme.
-		extend: {},
+		extend: {
+		},
 	},
 	corePlugins: {
 		// Disable Preflight base styles in builds targeting the editor.
 		preflight: includePreflight,
 	},
 	plugins: [
-		// Add Tailwind Typography (via _tw fork).
-		require('@_tw/typography'),
-
 		// Extract colors and widths from `theme.json`.
-		require('@_tw/themejson'),
+		require('@_tw/themejson')(require('../theme/theme.json')),
+
+		// Add Tailwind Typography.
+		require('@tailwindcss/typography'),
 
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require('@tailwindcss/forms'),
 		// require('@tailwindcss/aspect-ratio'),
 		// require('@tailwindcss/container-queries'),
+
+		function ({ addComponents }) {
+			addComponents({
+				'.container': {
+					maxWidth: '100%',
+					'@screen 2xl': {
+						maxWidth: '1140px',
+						padding: '0 15px',
+					},
+				}
+			})
+		},
 	],
 };
