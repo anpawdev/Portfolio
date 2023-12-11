@@ -1,0 +1,32 @@
+.DS_Store
+mysql/*
+mysql
+wp-content/plugins/akismet
+wp-content/plugins/hello.php
+wp-content/themes/twentytwentyone
+wp-content/themes/twentytwentytwo
+wp-content/themes/twentytwentythree
+wp-content/themes/twentytwentyfour
+wp-admin
+wp-includes
+node_modules
+# Ignore all files inside `wp-content` ...
+!wp-content
+wp-content/*
+# ... except directories with plugins and theme.
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+xmlrpc.php
+index.php
+license.txt
+wp-s*
+wp-l*
+wp-a*
+wp-b*
+wp-mail.php
+wp-trackback.php
+wp-cron.php
+wp-config-sample.php
+wp-comments-post.php
